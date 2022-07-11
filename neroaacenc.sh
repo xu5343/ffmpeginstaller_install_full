@@ -1,3 +1,6 @@
+#!/bin/bash
+#FFMPEG installation script
+
 #  Copyright (C) 2007-2014 Sherin.co.in. All rights reserved.
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -13,4 +16,27 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-
+RED='\033[01;31m'
+RESET='\033[0m'
+INSTALL_SDIR='/usr/src/ffmpegscript'
+_url=`cat ./url.txt`
+SOURCE_URL=$_url/neroaacenc
+INSTALL_DDIR='/usr/local/cpffmpeg'
+export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
+export TMPDIR=$HOME/tmp
+_package='NeroDigitalAudio.zip'
+sleep 2
+echo -e $RED"Installation of $_package ....... started"$RESET
+ldconfig
+cd $INSTALL_SDIR
+echo "Removing old source"
+rm -vrf nero*
+wget $SOURCE_URL/$_package
+#mv /root/ffmpeginstaller/source/neroAacEnc/$_package $INSTALL_SDIR
+yum -y install unzip
+unzip NeroDigitalAudio.zip -d nero
+cd nero/linux
+sudo install -D -m755 neroAacEnc /usr/local/bin
+ldconfig
+echo -e $RED"Installation of $_package ....... Completed"$RESET
+sleep 2
