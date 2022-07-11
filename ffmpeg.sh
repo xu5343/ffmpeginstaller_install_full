@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/ffmpeg
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -39,7 +39,6 @@ echo "Removing old source"
 #   cd ffmpeg/
 #wget http://ffmpeg.org/releases/ffmpeg-3.1.tar.gz
 wget $SOURCE_URL/ffmpeg-3.1.tar.gz
-#mv /root/ffmpeginstaller/source/ffmpeg/ffmpeg-3.1.tar.gz $INSTALL_SDIR
 tar -xvzf ffmpeg-3.1.tar.gz
 cd ffmpeg-3.1
    ldconfig
