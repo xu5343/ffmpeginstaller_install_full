@@ -41,6 +41,7 @@ echo "Removing old source"
 wget $SOURCE_URL/ffmpeg-3.1.tar.gz
 tar -xvzf ffmpeg-3.1.tar.gz
 cd ffmpeg-3.1
+export PKG_CONFIG_PATH=/usr/local/cpffmpeg/lib/pkgconfig
    ldconfig
 ./configure --prefix=$INSTALL_DDIR --pkg-config-flags="--static" --enable-shared --enable-nonfree \
 		--enable-gpl --enable-pthreads --enable-libfreetype  --enable-libopencore-amrnb  --enable-decoder=liba52 \
