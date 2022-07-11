@@ -1,0 +1,20 @@
+﻿请按照以下步骤进行安装
+---------------------------------------------
+要求：
+
+a）必须是Linux / Unix / POSIX服务器
+b）必须需要root shell（bash）访问
+c）您的服务器必须有200 MB的可用空间
+	
+i）检查服务器中是否安装了yum。 如果没有yum，
+请确保已安装automake，autoconf和libtools。
+建议配置特定分发的yum。	
+
+i）下载最新版本 ffmpeginstaller.X.X.X.tar.gz , where X.X.X is the version
+	# tar -xvzf ffmpeginstaller.X.X.X.tar.gz
+	#cd ffmpeginstaller.X.X.X/
+	# ./install.sh
+ 
+
+有任何问题请联系：jie5343@126.com
+
