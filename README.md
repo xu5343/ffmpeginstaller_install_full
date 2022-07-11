@@ -1,6 +1,7 @@
 ## ffmpeginstaller自动安装程序 
 
-#已经在等众多VPS和服务器的CentOS 5-7的32位和64位系统上测试通过。
+#已经在等众多VPS和服务器的CentOS 5-7的32位和64位系统上测试通过。  
+---
 请按照以下步骤进行安装
 要求：
 1）必须是Linux / Unix / POSIX服务器或VPS，
@@ -11,6 +12,7 @@
 6）下载安装:
 
 #使用putty或类似的SSH工具登陆VPS或服务器；
+---
 ~~~
 yum install -y git wget
 git clone https://github.com/xu5343/ffmpeginstaller_install_full.git ffmpeginstaller
