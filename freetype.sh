@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/freetype
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -33,7 +33,6 @@ cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf freetype*
    wget $SOURCE_URL/$_package
-#   mv /root/ffmpeginstaller/source/freetype/$_package $INSTALL_SDIR
    tar -zxvf $_package
    cd freetype-2.5.2/
    ./configure --prefix=$INSTALL_DDIR 
