@@ -24,7 +24,7 @@ SOURCE_URL=$_url/x264
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
-_package='x264'
+_package='last_stable_x264.tar.bz2'
 clear
 sleep 2
 echo -e $RED"Installation of $_package ....... started"$RESET
@@ -32,8 +32,9 @@ ldconfig
 cd $INSTALL_SDIR
 echo "Removing old source"
    rm -vrf $INSTALL_SDIR/x264-snapshot*
-	git clone git://git.videolan.org/x264.git
-	cd x264/
+	wget $SOURCE_URL/$_package
+	tar -xvjf last_stable_x264.tar.bz2
+	cd x264-snapshot-20180402-2245-stable
 	./configure  --prefix=$INSTALL_DDIR --enable-shared --disable-asm
 	make -j$cpu
 	make install
