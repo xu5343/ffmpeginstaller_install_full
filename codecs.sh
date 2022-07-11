@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/codecs
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -36,7 +36,6 @@ ldconfig
 echo "removing old source"
    rm -fr all* 
    wget $SOURCE_URL/$codec_source
-#mv /root/ffmpeginstaller/source/codecs/$_package $INSTALL_SDIR
    tar -xvjf $codec_source
    chown -R root.root all-20110131/
    mkdir -pv $INSTALL_DDIR/lib/codecs/
