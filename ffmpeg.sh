@@ -45,7 +45,7 @@ cd ffmpeg-3.1
 ./configure --prefix=$INSTALL_DDIR --enable-shared --enable-nonfree \
 		--enable-gpl --enable-pthreads --enable-libfreetype  --enable-libopencore-amrnb  --enable-decoder=liba52 \
 		--enable-libopencore-amrwb  --enable-libfaac  --enable-libmp3lame \
-		--enable-libtheora --enable-libvorbis  --enable-libx264  --enable-libxvid \
+		--enable-libtheora --enable-libvorbis  --enable-libx264  --enable-libx265  --enable-libxvid \
 		--extra-cflags=-I/usr/local/cpffmpeg/include/ --extra-ldflags=-L/usr/local/cpffmpeg/lib \
 		 --enable-version3 --extra-version=syslint
    make -j$cpu
