@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/lame
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -34,7 +34,6 @@ cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf lame*
    wget $SOURCE_URL/$lame_source
-#   mv /root/ffmpeginstaller/source/lame/$_package $INSTALL_SDIR
    tar -zxvf $_package
    cd lame-3.99.5/
    ./configure --prefix=$INSTALL_DDIR --enable-mp3x --enable-mp3rtp
