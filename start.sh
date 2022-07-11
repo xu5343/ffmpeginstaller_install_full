@@ -145,6 +145,8 @@ sh nasm.sh
 sh xvid.sh
 #x264
 sh x264.sh
+#x265
+sh x265.sh
 #re2c
 sh re2c.sh
 #Mplayer
