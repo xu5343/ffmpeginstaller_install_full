@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/neroaacenc
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -32,7 +32,6 @@ cd $INSTALL_SDIR
 echo "Removing old source"
 rm -vrf nero*
 wget $SOURCE_URL/$_package
-#mv /root/ffmpeginstaller/source/neroAacEnc/$_package $INSTALL_SDIR
 yum -y install unzip
 unzip NeroDigitalAudio.zip -d nero
 cd nero/linux
