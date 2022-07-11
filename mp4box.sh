@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/gpac
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -34,7 +34,6 @@ if [ -e "/etc/yum.conf" ];then
 yum -y install freetype-devel SDL-devel freeglut-devel
 fi
 wget -c $SOURCE_URL/$_package
-#mv /root/ffmpeginstaller/source/gpac/$_package $INSTALL_SDIR
 tar -xvzf $_package
 cd gpac/
 ./configure --prefix=/usr/local/cpffmpeg/ --extra-cflags=-I/usr/local/cpffmpeg/include/ \
