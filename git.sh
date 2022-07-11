@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/git
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -38,7 +38,6 @@ else
 	cd $INSTALL_SDIR/
 	rm -rf git*
 	wget $SOURCE_URL/git-1.7.2.5.tar.gz
-#	mv /root/ffmpeginstaller/source/git/git-1.7.2.5.tar.gz $INSTALL_SDIR
 	tar -xzf git-1.7.2.5.tar.gz
 	cd git-1.7.2.5/
 	./configure --prefix=/usr/
