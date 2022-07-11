@@ -33,7 +33,7 @@ cd $INSTALL_SDIR
 echo "Removing old source"
   rm -rf x265*
 	wget $SOURCE_URL/$_package
-	tar -xvjf $_package
+	tar -zxvf $_package
 	cd x265_3.2/build/linux
 	cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=$INSTALL_DDIR -DENABLE_SHARED:bool=off ../../source
 	make
