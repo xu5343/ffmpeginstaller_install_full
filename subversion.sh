@@ -40,7 +40,6 @@ if [ -e "/usr/bin/svn" ]; then
 	ln -sf /usr/bin/svn /usr/local/cpffmpeg/bin/svn
 else
    	wget $SOURCE_URL/$_package
-#   	mv /root/ffmpeginstaller/source/subversion/$_package $INSTALL_SDIR
    	tar -zxvf $_package
    	cd subversion-1.2.0/
    	./configure --prefix=$INSTALL_DDIR 
