@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/mediainfo_64
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -35,7 +35,6 @@ rm -vrf mediainfo_64*
 #wget http://sourceforge.net/projects/mediainfo/files/binary/libmediainfo0/0.7.64/libmediainfo0-0.7.64-1.x86_64.CentOS_6.rpm
 http://sourceforge.net/projects/mediainfo/files/binary/mediainfo/0.7.64/mediainfo-0.7.64-1.x86_64.CentOS_6.rpm
 wget $SOURCE_URL/$_package
-#mv /root/ffmpeginstaller/source/mediainfo_64/$_package $INSTALL_SDIR
 yum -y install unzip
 unzip mediainfo_64.zip
 cd mediainfo_64
