@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/mediainfo_i386
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -37,7 +37,6 @@ rm -vrf mediainfo_i386*
 #wget http://downloads.sourceforge.net/mediainfo/libmediainfo0-devel-0.7.32-1.i386.CentOS_5.rpm
 #wget http://downloads.sourceforge.net/mediainfo/mediainfo-0.7.32-1.i386.CentOS_5.rpm
 wget $SOURCE_URL/$_package
-#mv /root/ffmpeginstaller/source/mediainfo_i386/$_package $INSTALL_SDIR
 yum -y install unzip
 unzip mediainfo_i386.zip
 cd mediainfo_i386
