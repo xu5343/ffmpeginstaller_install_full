@@ -14,7 +14,8 @@
 #使用putty或类似的SSH工具登陆VPS或服务器；
 ---
 ~~~
-yum install -y wget
-wget https://raw.githubusercontent.com/xu5343/ffmpeginstaller_install_full/master/install.sh
+yum install -y git wget
+git clone https://github.com/xu5343/ffmpeginstaller_install_full.git ffmpeginstaller
+cd ffmpeginstaller
 sh install.sh
 ~~~
