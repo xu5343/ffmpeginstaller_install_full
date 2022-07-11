@@ -34,7 +34,7 @@ echo "Removing old source"
   rm -rf aom*
 	#wget $SOURCE_URL/$_package
 	#tar -zxvf $_package
-  git -C aom pull 2> /dev/null || git clone --depth 1 https://aomedia.googlesource.com/aom
+git clone --depth 1 https://aomedia.googlesource.com/aom
   mkdir -p aom_build
   cd aom_build
   PATH="/usr/local/bin:$PATH" cmake3 -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=$INSTALL_DDIR -DENABLE_SHARED:bool=ON -DBUILD_SHARED_LIBS=ON -DENABLE_NASM=on ../aom && \
