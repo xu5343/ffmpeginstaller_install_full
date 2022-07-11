@@ -34,7 +34,6 @@ ldconfig
 echo "removing old source"
    rm -vrf amrnb*
    wget $SOURCE_URL/$amr
-#mv /root/ffmpeginstaller/source/amrnb/$amr $INSTALL_SDIR
    tar -xvjf $amr
    cd amrnb-11.0.0.0/
    ./configure --prefix=$INSTALL_DDIR
