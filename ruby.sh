@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/ruby
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -42,7 +42,6 @@ else
 	echo "removing old source"
    	rm -vrf ruby*
    	wget $SOURCE_URL/$ruby
-#   	mv /root/ffmpeginstaller/source/ruby/$_package $INSTALL_SDIR
    	tar -xvzf  $ruby
    	cd ruby-1.8.7/
    	./configure --prefix=$INSTALL_DDIR
