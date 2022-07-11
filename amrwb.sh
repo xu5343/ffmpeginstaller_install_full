@@ -20,7 +20,7 @@ RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
 _url=`cat ./url.txt`
-SOURCE_URL=$_url/amrwb
+SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -33,7 +33,6 @@ ldconfig
 echo "removing old source"
    rm -vrf amrwb*
    wget $SOURCE_URL/$amrwb
-#   mv /root/ffmpeginstaller/source/amrwb/$_package $INSTALL_SDIR
    tar -xvjf $_package
    cd amrwb-11.0.0.0/
    ./configure --prefix=$INSTALL_DDIR
