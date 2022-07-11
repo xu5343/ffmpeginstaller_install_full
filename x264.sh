@@ -32,8 +32,11 @@ ldconfig
 cd $INSTALL_SDIR
 echo "Removing old source"
    rm -vrf $INSTALL_SDIR/x264-snapshot*
-	git clone https://code.videolan.org/videolan/x264.git
-	cd x264/
+	#git clone https://code.videolan.org/videolan/x264.git
+	#cd x264/
+	mv /root/ffmpeginstaller/source/last_stable_x264.tar.bz2 $INSTALL_SDIR
+	tar -xvjf last_stable_x264.tar.bz2
+	cd x264-snapshot-20180402-2245-stable
 	./configure  --prefix=$INSTALL_DDIR --enable-shared --disable-asm
 	make -j$cpu
 	make install
