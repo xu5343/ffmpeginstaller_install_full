@@ -42,7 +42,7 @@ wget $SOURCE_URL/ffmpeg-3.1.tar.gz
 tar -xvzf ffmpeg-3.1.tar.gz
 cd ffmpeg-3.1
    ldconfig
-./configure --prefix=$INSTALL_DDIR --enable-shared --enable-nonfree \
+./configure --prefix=$INSTALL_DDIR --pkg-config-flags="--static" --enable-shared --enable-nonfree \
 		--enable-gpl --enable-pthreads --enable-libfreetype  --enable-libopencore-amrnb  --enable-decoder=liba52 \
 		--enable-libopencore-amrwb  --enable-libfaac  --enable-libmp3lame \
 		--enable-libtheora --enable-libvorbis  --enable-libx264  --enable-libx265  --enable-libxvid \
