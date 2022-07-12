@@ -34,6 +34,7 @@ echo "Removing old source"
 	wget $SOURCE_URL/$_package
 	tar xvf $_package
 	cd libass-0.14.0
+	export PKG_CONFIG_PATH=$INSTALL_DDIR/lib/pkgconfig:$PKG_CONFIG_PATH
   ./configure --prefix=$INSTALL_DDIR --disable-static --disable-require-system-font-provider
 	make
 	make install
