@@ -36,7 +36,7 @@ if [ -e "/etc/yum.conf" ];then
         	libpng* libpng-devel* libstdc++* libstdc++-devel* libtiff* \
         	libtiff-devel* libtool*  libxml* libxml2* \
         	libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* \
-		ncurses-devel ncurses patch make apr-util giflib-devel giflib neon expat expat-devel alsa-lib -y
+		ncurses-devel ncurses patch make apr-util giflib-devel giflib neon expat expat-devel alsa-lib openssl-devel openjpeg-devel fribidi-devel fribidi mediainfo  -y
 	rpm -e alsa-lib --nodeps
 	export ARCH=$(arch)
 fi
