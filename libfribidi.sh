@@ -34,7 +34,7 @@ echo "Removing old source"
 	wget $SOURCE_URL/$_package
 	tar xf $_package
 	cd fribidi-1.0.4
-  ./configure --prefix=/usr/local/cpffmpeg --enable-shared
+  ./configure --prefix=$INSTALL_DDIR --enable-shared
 	make
 	make install
 
