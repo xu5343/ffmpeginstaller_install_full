@@ -24,7 +24,7 @@ SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
-_package='freetype-2.5.2.tar.gz'
+_package='freetype-2.9.1.tar.gz'
 clear
 echo -e $RED"Installation of $_package ....... started"$RESET
 subversion=$_package
@@ -34,7 +34,7 @@ echo "removing old source"
    rm -vrf freetype*
    wget $SOURCE_URL/$_package
    tar -zxvf $_package
-   cd freetype-2.5.2/
+   cd freetype-2.9.1/
    ./configure --prefix=$INSTALL_DDIR 
 
 make -j$cpu
