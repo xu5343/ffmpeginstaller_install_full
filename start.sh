@@ -118,6 +118,7 @@ sh nasm.sh
 sh xvid.sh
 sh x264.sh
 sh x265.sh
+sh libvpx.sh
 sh re2c.sh
 #Mplayer
 sh mplayer.sh
