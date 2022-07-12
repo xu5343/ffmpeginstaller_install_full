@@ -14,7 +14,6 @@
 ### 更新
  * add libvpx（2022-7-12）
  * add x265
- * update something soft to latest version
 
 ### Installer  
 
