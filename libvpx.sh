@@ -32,6 +32,7 @@ cd $INSTALL_SDIR
 echo "Removing old source"
   rm -rf libvpx*
 	wget $SOURCE_URL/$_package
+	tar -zxvf $_package
 	cd libvpx-1.10.0
 	./configure --prefix=$INSTALL_DDIR --enable-shared --enable-pic
 	make
