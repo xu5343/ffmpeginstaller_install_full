@@ -83,71 +83,41 @@ fi
 
 
 
-#free type
 sh freetype.sh
-#libwmf
+sh libfribidi.sh
+sh fontconfig.sh 
+sh libass.sh
 sh libwmf.sh
-#ruby
 sh ruby.sh
-#flvtool
 sh flvtool.sh
-#lame
 sh lame.sh
-#codecs
 sh codecs.sh
-#libogg
 sh libogg.sh
-#libvorbis
 sh libvorbis.sh
-#vorbistools
 sh vorbistools.sh
-#libtheora
 sh libtheora.sh
-#fdk-aac
 sh fdkaac.sh
-# voaacenc
 sh voaacenc.sh
-# voamrwbenc
 sh voamrwbenc.sh
-# libspeex
 sh libspeex.sh
-# libflac
 sh libflac.sh
-# libao
 sh libao.sh
-# uriparser
 sh uriparser.sh
-# libxspf
 #sh libxspf.sh
-# liboggz
 sh liboggz.sh
-# libfishsound
 #sh libfishsound.sh
-# yamdi
 sh yamdi.sh
-#amrnb
 sh amrnb.sh
-#amrwb
 sh amrwb.sh
-#openamr
 sh libopencoreamr.sh
-#liba52
 sh liba52.sh
-#facc
 sh facc.sh
-#faad2
 sh faad2.sh
-#yasm
 sh yasm.sh
-#nasm
 sh nasm.sh
-#xvid
 sh xvid.sh
-#x264
 sh x264.sh
-#x265
 sh x265.sh
-#re2c
 sh re2c.sh
 #Mplayer
 sh mplayer.sh
