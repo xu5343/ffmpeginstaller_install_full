@@ -32,7 +32,7 @@ cd $INSTALL_SDIR
 echo "Removing old source"
   rm -rf libass*
 	wget $SOURCE_URL/$_package
-	tar -zxvf $_package
+	tar xvf $_package
 	cd libass-0.14.0
   ./configure --prefix=$INSTALL_DDIR --disable-static --disable-require-system-font-provider
 	make
