@@ -14,8 +14,7 @@
 ### 更新
  * add libvpx（2022-7-12）
  * add x265
-
-### Installer  
+ 
 
 #使用putty或类似的SSH工具登陆VPS或服务器；
 ---
