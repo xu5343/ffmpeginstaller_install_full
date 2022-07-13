@@ -43,7 +43,7 @@ export PKG_CONFIG_PATH=/usr/local/cpffmpeg/lib/pkgconfig
    ldconfig
 ./configure --prefix=$INSTALL_DDIR --pkg-config-flags="--static" --enable-shared --enable-nonfree \
 		--enable-gpl --enable-pthreads --enable-libfreetype  --enable-libopencore-amrnb  --enable-decoder=liba52 \
-		--enable-libopencore-amrwb  --enable-libfdk-aac  --enable-libmp3lame \
+		--enable-libopencore-amrwb  --enable-libfaac  --enable-libmp3lame \
 		--enable-libtheora --enable-libvorbis  --enable-libx264  --enable-libx265  --enable-libfribidi  --enable-libass  --enable-fontconfig  --enable-openssl  --enable-libvpx  --extra-libs=-lpthread  --enable-postproc  --enable-swscale  --enable-runtime-cpudetect  --enable-libxvid \
 		--extra-cflags=-I/usr/local/cpffmpeg/include/ --extra-ldflags=-L/usr/local/cpffmpeg/lib \
 		 --enable-version3 --extra-version=syslint
