@@ -24,7 +24,7 @@ SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
-_package='FFMPEG'
+_package='ffmpeg-3.4.tar.gz'
 clear
 sleep 2
 ffmpeg_source=$_package
@@ -35,17 +35,15 @@ echo "Removing old source"
    rm -vrf ffmpeg*
    #wget $SOURCE_URL/$ffmpeg_source
    #tar -xvzf $ffmpeg_source
-#	git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
-#   cd ffmpeg/
-wget http://ffmpeg.org/releases/ffmpeg-3.4.tar.gz
-#wget $SOURCE_URL/ffmpeg-3.1.tar.gz
-tar -xvzf ffmpeg-3.1.tar.gz
-cd ffmpeg-3.1
+wget http://ffmpeg.org/releases/$ffmpeg_source
+#wget $SOURCE_URL/$ffmpeg_source
+tar -xvzf $ffmpeg_source
+cd ffmpeg-3.4
 export PKG_CONFIG_PATH=/usr/local/cpffmpeg/lib/pkgconfig
    ldconfig
 ./configure --prefix=$INSTALL_DDIR --pkg-config-flags="--static" --enable-shared --enable-nonfree \
 		--enable-gpl --enable-pthreads --enable-libfreetype  --enable-libopencore-amrnb  --enable-decoder=liba52 \
-		--enable-libopencore-amrwb  --enable-fdk-aac  --enable-libmp3lame \
+		--enable-libopencore-amrwb  --enable-libfdk-aac  --enable-libmp3lame \
 		--enable-libtheora --enable-libvorbis  --enable-libx264  --enable-libx265  --enable-libfribidi  --enable-libass  --enable-fontconfig  --enable-openssl  --enable-libvpx  --extra-libs=-lpthread  --enable-postproc  --enable-swscale  --enable-runtime-cpudetect  --enable-libxvid \
 		--extra-cflags=-I/usr/local/cpffmpeg/include/ --extra-ldflags=-L/usr/local/cpffmpeg/lib \
 		 --enable-version3 --extra-version=syslint
