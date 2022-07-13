@@ -24,8 +24,9 @@ git clone https://github.com/xu5343/ffmpeginstaller_install_full.git ffmpeginsta
 cd ffmpeginstaller
 bash install.sh
 ~~~
-
 ~~~
+
+
 which {ffmpeg,ffprobe,qt-faststart,mplayer,mencoder,flvtool2,MP4Box,yamdi,mediainfo,neroAacEnc}
 /usr/local/bin/ffmpeg
 /usr/local/bin/ffprobe
@@ -49,4 +50,6 @@ ffmpeg version 3.1-syslint Copyright (c) 2000-2016 the FFmpeg developers
   --enable-libvpx --extra-libs=-lpthread --enable-postproc
   --enable-swscale --enable-runtime-cpudetect --enable-libxvid 
   --extra-cflags=-I/usr/local/cpffmpeg/include/ --extra-ldflags=-L/usr/local/cpffmpeg/lib --enable-version3 --extra-version=syslint
-~~~
+~~~  
+#目前使用ffmpeg 3.1
+#注ffmpeg3.0x版本使用--enable-libfaac ，ffmpeg4.1版本后使用--enable-libfdk-aac
