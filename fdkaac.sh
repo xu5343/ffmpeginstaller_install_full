@@ -31,9 +31,12 @@ echo -e $RED"Installation of $_package ....... started"$RESET
 
 cd $INSTALL_SDIR/
 rm -rf fdk-aac*
-wget $SOURCE_URL/$_package
-tar -xvzf $_package
-cd fdk-aac-0.1.3/
+#wget $SOURCE_URL/$_package
+#tar -xvzf $_package
+#cd fdk-aac-0.1.3/
+wget https://jaist.dl.sourceforge.net/project/opencore-amr/fdk-aac/fdk-aac-2.0.2.tar.gz
+tar xvf fdk-aac-2.0.2.tar.gz
+cd fdk-aac-2.0.2
 	./configure  --prefix=$INSTALL_DDIR
 	make -j$cpu
 	make install
