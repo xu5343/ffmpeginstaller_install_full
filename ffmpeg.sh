@@ -24,7 +24,7 @@ SOURCE_URL=$_url
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
-_package='ffmpeg-3.4.tar.gz'
+_package='ffmpeg-3.1.tar.gz'
 clear
 sleep 2
 ffmpeg_source=$_package
@@ -35,10 +35,10 @@ echo "Removing old source"
    rm -vrf ffmpeg*
    #wget $SOURCE_URL/$ffmpeg_source
    #tar -xvzf $ffmpeg_source
-wget http://ffmpeg.org/releases/$ffmpeg_source
-#wget $SOURCE_URL/$ffmpeg_source
+#wget http://ffmpeg.org/releases/$ffmpeg_source
+wget $SOURCE_URL/$ffmpeg_source
 tar -xvzf $ffmpeg_source
-cd ffmpeg-3.4
+cd ffmpeg-3.1
 export PKG_CONFIG_PATH=/usr/local/cpffmpeg/lib/pkgconfig
    ldconfig
 ./configure --prefix=$INSTALL_DDIR --pkg-config-flags="--static" --enable-shared --enable-nonfree \
