@@ -51,5 +51,5 @@ ffmpeg version 3.1-syslint Copyright (c) 2000-2016 the FFmpeg developers
   --enable-swscale --enable-runtime-cpudetect --enable-libxvid 
   --extra-cflags=-I/usr/local/cpffmpeg/include/ --extra-ldflags=-L/usr/local/cpffmpeg/lib --enable-version3 --extra-version=syslint
 ~~~  
-#目前使用ffmpeg 3.1
+#目前使用ffmpeg 3.1  
 #注ffmpeg3.0x版本使用--enable-libfaac ，ffmpeg4.1版本后使用--enable-libfdk-aac
